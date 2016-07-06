@@ -1,0 +1,16 @@
+{
+  "name": "classyact",
+  "version": "1.0.0",
+  "description": "Command line tool for creating a new React Native class file",
+  "scripts": {
+
+  },
+  "bin": {
+    "classyact": "cli.js"
+  },
+  "dependencies": {
+    "shelljs": "*"
+  },
+  "author": "Waffle and Toast",
+  "license": "MIT"
+}
