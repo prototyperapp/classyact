@@ -14,8 +14,8 @@ classyact MyClassName
 Where MyClassName is the name of your class (don't include .js or anything like that)
 
 ## Example of the class created
-```javascript
 The class created for you will look something like this...
+```javascript
 import React, { Component } from 'react';
 import {
 	StyleSheet,
