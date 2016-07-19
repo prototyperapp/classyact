@@ -11,13 +11,21 @@ var returnHelp = function() {
 };
 
 var createClass = function(currentDir, className) {
+  var extension = ".js";
+  var actualClassName = className;
+
+  if (className.indexOf(".") > 0) {
+    extension = className.substr(className.indexOf(".") + 1);
+    actualClassName = className.substr(0, className.indexOf("."));
+  }
+
   var fileContents = "import React, { Component } from 'react';\n";
   fileContents += "import {\n\tStyleSheet,\n\tText,\n\tView\n} from 'react-native';";
-  fileContents += "\n\nexport default class " + className + " extends Component {\n";
+  fileContents += "\n\nexport default class " + actualClassName + " extends Component {\n";
   fileContents += "\trender() {\n\n\t}\n}";
   fileContents += "\n\nconst localStyles = StyleSheet.create({\n\n});"
 
-  fs.writeFile(currentDir + "/" + className + ".js", fileContents, "utf8", function(err) {
+  fs.writeFile(currentDir + "/" + actualClassName + extension, fileContents, "utf8", function(err) {
     if (err) {
       console.log(err);
     } else {
