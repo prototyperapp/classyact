@@ -15,7 +15,7 @@ var createClass = function(currentDir, className) {
   var actualClassName = className;
 
   if (className.indexOf(".") > 0) {
-    extension = className.substr(className.indexOf(".") + 1);
+    extension = "." + className.substr(className.indexOf(".") + 1);
     actualClassName = className.substr(0, className.indexOf("."));
   }
 
