@@ -45,7 +45,7 @@ var createReactClass = function(currentDir, className) {
   }
 
   var fileContents = "import React, { Component } from 'react';\n";
-  fileContents += "import Radium from 'radium;\n";
+  fileContents += "import Radium from 'radium';\n";
   fileContents += "\n\nexport default class " + actualClassName + " extends Radium(Component) {\n";
   fileContents += "\trender() {\n\n\t}\n}";
   fileContents += "\n\nconst localStyles = {\n\n};"
